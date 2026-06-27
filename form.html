@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Forms in HTML</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        padding: 20px;
+    }
+
+    h1 {
+        color: #2c3e50;
+        text-align: center;
+    }
+
+    nav {
+        background-color: #2c3e50;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin-right: 15px;
+        font-size: 16px;
+    }
+
+    nav a:hover {
+        color: #3498db;
+    }
+
+    fieldset {
+        background-color: white;
+        border: 1px solid #dddddd;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    }
+
+    legend {
+        color: #2980b9;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: #2c3e50;
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    select,
+    textarea {
+        width: 300px;
+        padding: 8px;
+        border: 1px solid #dddddd;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+
+    input[type="submit"] {
+        background-color: #2980b9;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #2c3e50;
+    }
+
+    input[type="reset"] {
+        background-color: #e74c3c;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-left: 10px;
+    }
+
+    input[type="reset"]:hover {
+        background-color: #c0392b;
+    }
+</style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+   <!-- NAVBAR -->
+<nav>
+    <a href="basic.html" >Home</a> |
+    <a href="table.html" >Table</a> |
+    <a href="form.html" >Form</a> |
+    <a href="lists.html" >Lists</a>
+</nav>
+    <h1>Student Registration Form</h1>
+
+    <form>
+
+        <!-- FIELDSET 1 — Personal Details -->
+        <fieldset>
+            <legend>Personal Details</legend>
+
+            <!-- Text Input -->
+            <label>Name:</label>
+            <input type="text" placeholder="Enter your name">
+            <br><br>
+
+            <!-- Email Input -->
+            <label>Email:</label>
+            <input type="email" placeholder="Enter your email">
+            <br><br>
+
+            <!-- Password Input -->
+            <label>Password:</label>
+            <input type="password" placeholder="Enter password">
+            <br><br>
+
+            <!-- Radio Buttons -->
+            <label>Gender:</label>
+            <input type="radio" name="gender" value="female"> Female
+            <input type="radio" name="gender" value="male"> Male
+            <input type="radio" name="gender" value="other"> Other
+            <br><br>
+
+        </fieldset>
+
+        <br>
+
+        <!-- FIELDSET 2 — Academic Details -->
+        <fieldset>
+            <legend>Academic Details</legend>
+
+            <!-- Dropdown -->
+            <label>Branch:</label>
+            <select>
+                <option>BCA</option>
+                <option>BBA</option>
+                <option>BSc</option>
+            </select>
+            <br><br>
+
+            <!-- Checkbox -->
+            <label>Skills:</label>
+            <input type="checkbox" value="python"> Python
+            <input type="checkbox" value="java"> Java
+            <input type="checkbox" value="c"> C
+            <input type="checkbox" value="html"> HTML
+            <br><br>
+
+            <!-- Textarea -->
+            <label>About yourself:</label>
+            <br>
+            <textarea rows="4" cols="40"
+            placeholder="Write something about yourself...">
+            </textarea>
+            <br><br>
+
+        </fieldset>
+
+        <br>
+
+        <!-- FIELDSET 3 — Additional Info -->
+        <fieldset>
+            <legend>College Location</legend>
+
+            <!-- IFRAME — embeds Google Maps -->
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.0!2d76.32!3d10.04!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zQ1VTQVQ!5e0!3m2!1sen!2sin!4v1234567890"
+                width="400" 
+                height="300" 
+                style="border:0;" 
+                allowfullscreen="">
+            </iframe>
+
+        </fieldset>
+
+        <br>
+
+        <!-- DIV — groups submit button -->
+        <div>
+            <input type="submit" value="Register">
+            <input type="reset" value="Clear Form">
+        </div>
+
+    </form>
+
+</body>
+
+</html>
